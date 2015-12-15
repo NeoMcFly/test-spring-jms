@@ -1,1 +1,19 @@
-/target/
+*~
+.metadata
+target/
+tmp/
+*.tmp
+*.bak
+*.swp
+local.properties
+.settings/
+
+# Eclipse Core
+.project
+
+# External tool builders
+.externalToolBuilders/
+
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
