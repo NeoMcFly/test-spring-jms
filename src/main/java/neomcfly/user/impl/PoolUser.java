@@ -1,12 +1,13 @@
-package fr.free.neomcfly.user.impl;
+package neomcfly.user.impl;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import neomcfly.calcul.impl.CalcukTaskProvider;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import fr.free.neomcfly.calcul.impl.CalcukTaskProvider;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

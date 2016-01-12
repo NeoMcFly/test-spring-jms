@@ -1,4 +1,4 @@
-package fr.free.neomcfly.calcul.impl;
+package neomcfly.calcul.impl;
 
 import javax.annotation.Resource;
 import javax.jms.JMSException;

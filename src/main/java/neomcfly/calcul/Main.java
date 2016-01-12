@@ -1,13 +1,12 @@
-package fr.free.neomcfly.calcul;
+package neomcfly.calcul;
 
 import java.util.Scanner;
 
 import lombok.extern.slf4j.Slf4j;
+import neomcfly.user.impl.PoolUser;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import fr.free.neomcfly.user.impl.PoolUser;
 
 @Slf4j
 public class Main {
