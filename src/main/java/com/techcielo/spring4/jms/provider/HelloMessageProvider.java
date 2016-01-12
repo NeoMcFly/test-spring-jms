@@ -25,7 +25,6 @@ public class HelloMessageProvider {
         System.out.println(prod.getName());
 
         jmsTemplate.send(new MessageCreator() {
-            @Override
             public Message createMessage(Session session) throws JMSException {
                 TextMessage msg = session.createTextMessage(prod.getName());
                 return msg;

@@ -3,12 +3,11 @@ package fr.free.neomcfly.user.impl;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import lombok.extern.slf4j.Slf4j;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import fr.free.neomcfly.calcul.impl.CalcukTaskProvider;
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Service("poolUser")
@@ -39,7 +38,6 @@ public class PoolUser {
             this.username = username;
         }
 
-        @Override
         public void run() {
             processCommand();
         }

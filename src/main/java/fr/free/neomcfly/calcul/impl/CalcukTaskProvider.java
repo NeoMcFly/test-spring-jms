@@ -6,13 +6,13 @@ import javax.jms.Message;
 import javax.jms.Session;
 import javax.jms.TextMessage;
 
-import lombok.extern.slf4j.Slf4j;
-
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Service;
 
 import com.techcielo.spring4.jms.provider.Product;
+
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Service("msgProviderSvc")
@@ -35,7 +35,6 @@ public class CalcukTaskProvider {
         log.info("Send " + prod.getName());
 
         jmsTemplate.send(new MessageCreator() {
-            @Override
             public Message createMessage(Session session) throws JMSException {
                 TextMessage msg = session.createTextMessage(prod.getName());
                 return msg;
