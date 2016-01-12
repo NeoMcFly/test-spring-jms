@@ -13,8 +13,7 @@
 
 	<!-- This sescion tells Spring context where to look for bean classes with 
 		appropriate annotations -->
-<!-- 	<context:component-scan base-package="com.techcielo.spring4"></context:component-scan> -->
-	<context:component-scan base-package="fr.free.neomcfly"></context:component-scan>
+	<context:component-scan base-package="neomcfly"></context:component-scan>
 
 	<jms:annotation-driven/>
 
