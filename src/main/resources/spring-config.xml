@@ -41,12 +41,9 @@
 	</bean>
 
 	<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
-		<constructor-arg ref="connectionFactory" />
-<!-- 		<property name="connectionFactory" ref="connectionFactory" /> -->
+		<property name="connectionFactory" ref="connectionFactory" />
 		<property name="defaultDestination" ref="destination" />
 	</bean>
-
-
 
 
 <!-- 	OLD JMS Beans -->
