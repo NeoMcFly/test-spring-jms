@@ -1,24 +1,22 @@
 package neomcfly.calcul.impl;
 
-import javax.annotation.Resource;
 import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.Session;
 import javax.jms.TextMessage;
 
-import org.springframework.jms.core.JmsTemplate;
-import org.springframework.jms.core.MessageCreator;
-import org.springframework.stereotype.Service;
-
-import com.techcielo.spring4.jms.provider.Product;
-
+import lombok.Getter;
+import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
+import org.springframework.jms.core.JmsTemplate;
+import org.springframework.jms.core.MessageCreator;
+
 @Slf4j
-@Service("msgProviderSvc")
 public class CalcukTaskProvider {
 
-    @Resource(name = "jmstemplate")
+	@Getter
+	@Setter
     private JmsTemplate jmsTemplate;
 
     public void sendMessages() {

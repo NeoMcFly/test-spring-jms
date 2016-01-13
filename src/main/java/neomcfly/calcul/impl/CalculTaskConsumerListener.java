@@ -1,24 +1,15 @@
 package neomcfly.calcul.impl;
 
-import javax.annotation.Resource;
 import javax.jms.JMSException;
 import javax.jms.Message;
+import javax.jms.MessageListener;
 import javax.jms.TextMessage;
 
 import lombok.extern.slf4j.Slf4j;
 
-import org.springframework.jms.annotation.JmsListener;
-import org.springframework.jms.core.JmsTemplate;
-import org.springframework.stereotype.Service;
-
 @Slf4j
-@Service("msgConsumerLst")
-public class CalculTaskConsumerListener {
+public class CalculTaskConsumerListener implements MessageListener {
 
-    @Resource(name = "jmstemplate")
-    private JmsTemplate jmsTemplate;
-
-    @JmsListener(destination = "springtest")
     public void readMessage(Message message) throws JMSException {
 
         if (message instanceof TextMessage) {
@@ -39,4 +30,13 @@ public class CalculTaskConsumerListener {
 
         }
     }
+
+	@Override
+	public void onMessage(Message message) {
+		try {
+			this.readMessage(message);
+		} catch (JMSException e) {
+			e.printStackTrace();
+		}
+	}
 }

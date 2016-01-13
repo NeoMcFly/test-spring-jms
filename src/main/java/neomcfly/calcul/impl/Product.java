@@ -1,4 +1,4 @@
-package com.techcielo.spring4.jms.provider;
+package neomcfly.calcul.impl;
 
 import lombok.Data;
 

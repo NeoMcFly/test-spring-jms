@@ -5,17 +5,17 @@ import java.util.concurrent.Executors;
 
 import neomcfly.calcul.impl.CalcukTaskProvider;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
+import lombok.Getter;
+import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-@Service("poolUser")
 public class PoolUser {
 
-    @Autowired
-    CalcukTaskProvider provider;
+	@Getter
+	@Setter
+    protected CalcukTaskProvider provider;
 
     public void run() {
         ExecutorService executor = Executors.newFixedThreadPool(50);
