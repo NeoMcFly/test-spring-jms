@@ -31,7 +31,6 @@ public class CalculTaskConsumerListener implements MessageListener {
         }
     }
 
-	@Override
 	public void onMessage(Message message) {
 		try {
 			this.readMessage(message);
